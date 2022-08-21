@@ -129,9 +129,9 @@ with st.form("my_form"):
         only_data.drop_duplicates(inplace=True)
         only_data.dropna(axis=0, inplace=True)
         new_cleaned_data = remove_punctuation(only_data)
-        # model1 = pickle.load(open('model.pkl', 'rb'))
+        model1 = pickle.load(open('./model.pkl', 'rb'))
         # model1 = joblib.load('model.sav')
-        model1 = tf.keras.models.load_model('model.h5')
+        # model1 = tf.keras.models.load_model('model.pkl')
 
         ####### new one starts here
 
